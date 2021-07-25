@@ -11,15 +11,27 @@ mount:
 $ mkdir -p mnt/bucket/sub
 $ boltmnt test.bolt mnt &
 $ echo Hello, world > mnt/bucket/sub/greeting
-$ ls -lhR mnt/bucket
-total 0
-drwxr-xr-x  1 root  wheel     0B Jul 25 11:04 sub
-
-bucket//sub:
-total 8
--rw-r--r--  1 root  wheel    13B Jul 25 11:04 greeting
+$ mkdir -p mnt/default/
+$ echo bingoo > mnt/default/name
+$ cat  mnt/default/name
 $ cat mnt/bucket/sub/greeting
 Hello, world
+$ ls -lhR mnt
+total 0
+drwxr-xr-x  1 root  wheel     0B Jul 26 07:07 bucket
+drwxr-xr-x  1 root  wheel     0B Jul 26 07:07 default
+
+mnt//bucket:
+total 0
+drwxr-xr-x  1 root  wheel     0B Jul 26 07:07 sub
+
+mnt//bucket/sub:
+total 8
+-rw-r--r--  1 root  wheel    13B Jul 26 07:07 greeting
+
+mnt//default:
+total 8
+-rw-r--r--  1 root  wheel     7B Jul 26 07:07 name
 ```
 
 unmount:
