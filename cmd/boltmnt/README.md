@@ -8,8 +8,9 @@ little bit like a file system tree.
 mount:
 
 ```sh
-$ mkdir -p mnt/bucket/sub
+$ mkdir -p mnt
 $ boltmnt test.bolt mnt &
+$ mkdir -p mnt/bucket/sub
 $ echo Hello, world > mnt/bucket/sub/greeting
 $ mkdir -p mnt/default/
 $ echo bingoo > mnt/default/name
