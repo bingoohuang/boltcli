@@ -134,8 +134,12 @@ func bucketList(c *cli.Context) error {
 		return cli.Exit("GetBuckets err "+err.Error(), 1)
 	}
 
-	for _, b := range bs {
-		fmt.Printf("%s\n", b)
+	for i, b := range bs {
+		fmt.Printf("%d: %s\n", i+1, b)
+	}
+
+	if len(bs) == 0 {
+		fmt.Printf("no buckets!\n")
 	}
 
 	return nil

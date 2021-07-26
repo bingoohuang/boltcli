@@ -3,7 +3,7 @@
 [Bolt](https://github.com/boltdb/bolt) is a key-value store that also supports nested buckets. This makes it look a
 little bit like a file system tree.
 
-`bolt-mount` exposes a Bolt database as a FUSE file system.
+`boltmnt` exposes a Bolt database as a FUSE file system.
 
 mount:
 
